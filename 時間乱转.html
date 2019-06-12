@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<body>
+       <button id="start">开始</button>
+       	<button id="stop">结束</button>
+		<script>			
+			
+			but1=document.getElementById('start');
+			but2=document.getElementById('stop');
+			function start(){
+				obj=setInterval(function(){				
+				document.title=++i;
+			},400);
+			}
+			i=0;
+			obj=setInterval(function(){				
+				document.title=++i;
+			},400);
+			
+			but2.onclick=function(){
+				clearInterval(obj);
+			}
+			but1.onclick=function(){				
+			   start();
+			}
+		</script>
+	</body>
+</html>
